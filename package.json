@@ -1,0 +1,36 @@
+{
+  "name": "timeline-creator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "author": "Lorhan Sohaky",
+  "keywords": [],
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "start": "node src/index.js",
+    "lint": "prettier-standard src/**/*.js --format --lint"
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "prettier-standard --format --lint",
+      "git add"
+    ],
+    "package.json": [
+      "prettier-standard --format --lint",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {
+    "prettier-standard": "^16.3.0"
+  },
+  "devDependencies": {
+    "husky": "^4.2.5",
+    "jest": "^26.0.1"
+  }
+}
