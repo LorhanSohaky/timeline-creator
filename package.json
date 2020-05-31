@@ -9,7 +9,7 @@
   "scripts": {
     "test": "jest",
     "start": "node src/index.js",
-    "lint": "prettier-standard src/**/*.js --format --lint"
+    "lint": "prettier-standard \"src/**/*.js\" --format --lint"
   },
   "lint-staged": {
     "src/**/*.js": [
