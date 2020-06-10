@@ -28,7 +28,8 @@
   },
   "dependencies": {
     "gm": "^1.23.1",
-    "prettier-standard": "^16.3.0"
+    "prettier-standard": "^16.3.0",
+    "prompts": "^2.3.2"
   },
   "devDependencies": {
     "husky": "^4.2.5",
