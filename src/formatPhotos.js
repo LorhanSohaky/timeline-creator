@@ -31,7 +31,7 @@ function getStructRecursively (dir) {
 function createDirectories (directories, mainDir) {
   for (let i = 0; i < directories.length; i++) {
     const dir = directories[i].replace(
-      `${mainDir}/${mainDir}`,
+      `${mainDir}/timeline`,
       `${mainDir}/converted`
     )
 
@@ -59,7 +59,7 @@ async function prepareAllPhotos (photos, mainDir) {
   const outputFiles = []
   for (let i = 0; i < photos.length; i++) {
     const outputFileName = photos[i].replace(
-      `${mainDir}/${mainDir}`,
+      `${mainDir}/timeline`,
       `${mainDir}/converted`
     )
     outputFiles.push(await preparePhoto(photos[i], outputFileName))
