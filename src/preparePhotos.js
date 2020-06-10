@@ -10,12 +10,13 @@ function autoRotateResizeAndConvertToJpeg (file, outputFileName) {
   return new Promise((resolve, reject) => {
     gm(file)
       .command('convert')
-      .in('-background')
-      .in('white')
-      .in('-flatten')
+      .autoOrient()
       .in('-resize')
       .in('1920x1080>')
-      .autoOrient()
+      .in('-transparent')
+      .in('white')
+      .in('-extent')
+      .in('0x0')
       .write(`${outputFileName}.jpeg`, err => {
         if (err) {
           reject(err)
