@@ -29,13 +29,16 @@ function autoRotateResizeAndConvertToJpeg (file, outputFileName) {
 }
 
 async function preparePhotos (inputDir, outputDir) {
+  const timelineDir = `${outputDir}/timeline`
+
   const files = listFiles(inputDir)
+  const editedFiles = []
 
   for (let i = 0; i < files.length; i++) {
     const stat = fs.statSync(`${inputDir}/${files[i].name}`)
     const date = stat.mtime
 
-    const dir = `${outputDir}/${date.getFullYear()}/${date.getMonth() + 1}`
+    const dir = `${timelineDir}/${date.getFullYear()}/${date.getMonth() + 1}`
 
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true })
@@ -45,9 +48,11 @@ async function preparePhotos (inputDir, outputDir) {
       `${inputDir}/${files[i].name}`,
       `${dir}/${date.valueOf()}`
     )
+
+    editedFiles.push(`${dir}/${date.valueOf()}.jpeg`)
   }
 
-  return files
+  return editedFiles
 }
 
 module.exports = preparePhotos
