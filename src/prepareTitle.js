@@ -46,12 +46,12 @@ async function createTitle (dir, title) {
       gravity: 'center'
     }
     gm()
-      .out('-size', `${width}x${height}`)
-      .out('-gravity', templateSettings.gravity)
-      .out('-background', 'transparent')
-      .out('-fill', 'white')
-      .out('-kerning', '-1')
-      .out(`caption:${title}`)
+      .in('-size', `${width}x${height}`)
+      .in('-gravity', templateSettings.gravity)
+      .in('-background', 'transparent')
+      .in('-fill', 'white')
+      .in('-kerning', '-1')
+      .in(`caption:${title}`)
       .write(outputFile, error => {
         if (error) {
           return reject(error)
