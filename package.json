@@ -35,7 +35,6 @@
     "videoshow": "^0.1.12"
   },
   "devDependencies": {
-    "husky": "^4.2.5",
-    "jest": "^26.0.1"
+    "husky": "^4.2.5"
   }
 }
