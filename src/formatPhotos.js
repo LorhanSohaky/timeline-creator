@@ -7,7 +7,7 @@ async function formatPhotos (dir) {
   const struct = getStructRecursively(timelineDir)
   createDirectories(struct, dir)
 
-  const files = listFilesRecursivelyAndStruct(timelineDir)
+  const files = listFilesRecursively(timelineDir)
 
   const convertedPhotos = await prepareAllPhotos(files, dir)
 
@@ -41,16 +41,14 @@ function createDirectories (directories, mainDir) {
   }
 }
 
-function listFilesRecursivelyAndStruct (dir) {
+function listFilesRecursively (dir) {
   const dirents = fs.readdirSync(dir, { encoding: 'utf8', withFileTypes: true })
   const files = dirents
     .filter(dirent => dirent.isFile())
     .map(dirent => `${dir}/${dirent.name}`)
   const directories = dirents
     .filter(dirent => dirent.isDirectory() && !isNaN(dirent.name))
-    .map(dirent =>
-      listFilesRecursivelyAndStruct(`${dir}/${dirent.name}`).flat()
-    )
+    .map(dirent => listFilesRecursively(`${dir}/${dirent.name}`).flat())
 
   return [...files, ...directories].flat()
 }
@@ -70,8 +68,8 @@ async function prepareAllPhotos (photos, mainDir) {
 
 function preparePhoto (inputFile, outputFile) {
   return new Promise((resolve, reject) => {
-    const width = 1920
-    const height = 1080
+    const width = 720
+    const height = 480
 
     gm()
       .in(inputFile)
