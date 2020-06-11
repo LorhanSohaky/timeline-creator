@@ -15,7 +15,7 @@ async function prepareTitle (dir, mainTitle) {
     const last = paths[paths.length - 1]
     const penultimate = paths[paths.length - 2]
 
-    const isMonth = isNaN(last) && isNaN(penultimate)
+    const isMonth = !isNaN(last) && !isNaN(penultimate)
 
     const title = isMonth ? moment(`${last}`, 'M').format('MMMM') : last
 
@@ -36,8 +36,8 @@ function getStructRecursively (dir) {
 }
 
 async function createTitle (dir, title) {
-  const width = 1920
-  const height = 1080
+  const width = 720
+  const height = 480
 
   return new Promise((resolve, reject) => {
     const outputFile = `${dir}/title.png`
