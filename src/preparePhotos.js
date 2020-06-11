@@ -12,7 +12,7 @@ function autoRotateResizeAndConvertToJpeg (file, outputFileName) {
       .command('convert')
       .autoOrient()
       .in('-resize')
-      .in('1920x1080>')
+      .in('720x480>')
       .in('-transparent')
       .in('white')
       .in('-extent')
