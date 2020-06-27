@@ -4,7 +4,11 @@
   "description": "Timeline video creator",
   "main": "src/index.js",
   "author": "Lorhan Sohaky",
-  "keywords": [],
+  "keywords": [
+    "timeline",
+    "video",
+    "creator"
+  ],
   "license": "MIT",
   "scripts": {
     "test": "jest",
