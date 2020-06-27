@@ -1,5 +1,8 @@
 # Timeline Creator
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub contributors](https://img.shields.io/github/contributors/LorhanSohaky/timeline-creator.svg)](https://github.com/LorhanSohaky/timeline-creator/graphs/contributors/)
+
 ## Motivação
 
 O dia dos namorados estava chegando e eu não tinha ideia do que poderia fazer de especial para a minha namorada. Então depois de refletir bastante, pensei comigo mesmo:
