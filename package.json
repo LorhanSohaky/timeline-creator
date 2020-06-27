@@ -1,7 +1,7 @@
 {
-  "name": "timeline-creator",
+  "name": "@lorhansohaky/timeline-creator",
   "version": "1.0.0",
-  "description": "",
+  "description": "Timeline video creator",
   "main": "src/index.js",
   "author": "Lorhan Sohaky",
   "keywords": [],
@@ -36,5 +36,13 @@
   "devDependencies": {
     "husky": "^4.2.5",
     "prettier-standard": "^16.3.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LorhanSohaky/timeline-creator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LorhanSohaky/timeline-creator/issues"
+  },
+  "homepage": "https://github.com/LorhanSohaky/timeline-creator#readme"
 }
