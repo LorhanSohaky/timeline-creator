@@ -1,7 +1,8 @@
 # Timeline Creator
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub contributors](https://img.shields.io/github/contributors/LorhanSohaky/timeline-creator.svg)](https://github.com/LorhanSohaky/timeline-creator/graphs/contributors/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/LorhanSohaky/timeline-creator/blob/master/LICENSE)
+[![GitHub contributors](https://img.shields.io/github/contributors/LorhanSohaky/timeline-creator.svg)](https://github.com/LorhanSohaky/timeline-creator/graphs/contributors)
+[![NPM package version](https://img.shields.io/npm/v/@lorhansohaky/timeline-creator)](https://www.npmjs.com/package/@lorhansohaky/timeline-creator)
 
 ## Motivação
 
