@@ -24,13 +24,18 @@ async function prepareTitle (dir, mainTitle) {
 }
 
 function getStructRecursively (dir) {
-  const dirents = fs.readdirSync(dir, { encoding: 'utf8', withFileTypes: true })
+  const dirents = fs.readdirSync(dir, {
+    encoding: 'utf8',
+    withFileTypes: true
+  })
 
   const list = [dir]
 
   dirents
     .filter(dirent => dirent.isDirectory() && !isNaN(dirent.name))
-    .forEach(dirent => list.push(getStructRecursively(`${dir}/${dirent.name}`)))
+    .forEach(dirent =>
+      list.push(getStructRecursively(`${dir}/${dirent.name}`))
+    )
 
   return list.flat()
 }

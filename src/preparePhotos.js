@@ -2,7 +2,10 @@ const fs = require('fs')
 const gm = require('gm').subClass({ imageMagick: true })
 
 function listFiles (dir) {
-  const dirents = fs.readdirSync(dir, { encoding: 'utf8', withFileTypes: true })
+  const dirents = fs.readdirSync(dir, {
+    encoding: 'utf8',
+    withFileTypes: true
+  })
   return dirents.filter(dirent => dirent.isFile())
 }
 

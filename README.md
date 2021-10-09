@@ -27,5 +27,3 @@ A ideia é que você crie uma pasta com todas as fotos e o programa irá organiz
 ## Licença
 
 Leia a licença [clique aqui](LICENSE)
-
-

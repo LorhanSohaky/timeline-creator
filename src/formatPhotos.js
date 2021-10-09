@@ -15,7 +15,10 @@ async function formatPhotos (dir) {
 }
 
 function getStructRecursively (dir) {
-  const dirents = fs.readdirSync(dir, { encoding: 'utf8', withFileTypes: true })
+  const dirents = fs.readdirSync(dir, {
+    encoding: 'utf8',
+    withFileTypes: true
+  })
 
   const paths = dirents
     .filter(dirent => dirent.isDirectory() && !isNaN(dirent.name))
@@ -42,7 +45,10 @@ function createDirectories (directories, mainDir) {
 }
 
 function listFilesRecursively (dir) {
-  const dirents = fs.readdirSync(dir, { encoding: 'utf8', withFileTypes: true })
+  const dirents = fs.readdirSync(dir, {
+    encoding: 'utf8',
+    withFileTypes: true
+  })
   const files = dirents
     .filter(dirent => dirent.isFile())
     .map(dirent => `${dir}/${dirent.name}`)

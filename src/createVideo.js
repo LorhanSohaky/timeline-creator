@@ -64,7 +64,10 @@ function prepareDirectory (dir) {
 }
 
 function getYears (dir) {
-  const dirents = fs.readdirSync(dir, { encoding: 'utf8', withFileTypes: true })
+  const dirents = fs.readdirSync(dir, {
+    encoding: 'utf8',
+    withFileTypes: true
+  })
 
   const years = dirents
     .filter(dirent => dirent.isDirectory() && !isNaN(dirent.name))
@@ -111,7 +114,10 @@ function createYearVideo (dir, outputDir) {
 }
 
 function listFilesRecursively (dir) {
-  const dirents = fs.readdirSync(dir, { encoding: 'utf8', withFileTypes: true })
+  const dirents = fs.readdirSync(dir, {
+    encoding: 'utf8',
+    withFileTypes: true
+  })
   const files = dirents
     .filter(dirent => dirent.isFile())
     .sort((a, b) => {
